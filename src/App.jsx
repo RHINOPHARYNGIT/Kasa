@@ -4,7 +4,6 @@ import {
   BrowserRouter as Router,
   Route,
   Routes,
-  Navigate,
 } from "react-router-dom";
 
 //style by Sass Partials
@@ -30,7 +29,6 @@ function App() {
             <Route index element={<Home />} />
             <Route path="about" element={<About />} />
             <Route path="products/:productId" element={<Oneproduct />} />
-            <Route path="/kaza" element={<Navigate to="/" replace />} />
             <Route path="*" element={<PageNotFound />} />
           </Routes>
           <Footer />

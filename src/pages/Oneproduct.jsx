@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { Navigate, useParams } from "react-router-dom";
 import products from "../__mocks__/data.json";
 
 import Rating from "../components/Rating";
@@ -10,10 +10,14 @@ import Collapse from "../components/Collapse";
 const Oneproduct = () => {
   const { productId } = useParams();
   const product = products.find((product) => product.id === productId);
+  /*si le produit n'existe pas,redirection vers la page NotFound*/
+  if(product===undefined){
+    return <Navigate to="/*"/>;}
   const { title, location, rating, host, equipments, description, pictures } =
     product;
 
   return (
+    
     <div className="Oneproduct">
       <Slider slides={pictures} />
       <div className="Oneproduct__content">
