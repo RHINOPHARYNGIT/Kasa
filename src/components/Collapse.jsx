@@ -1,4 +1,5 @@
 import React from "react";
+import imageArrow from "../design/Vector.svg"
 // possible d'ajuster l'ouverture du collapse avec usestate
 
 const Collapse = ({ title, content }) => {
@@ -20,8 +21,9 @@ const Collapse = ({ title, content }) => {
       <button type="button" className="collapse__button" onClick={isCollapse}>
         {title}
 
-        <p className="collapse__arrow">&lt;</p>
+        <img className="collapse__arrow" src={imageArrow} alt=""/>
       </button>
+      
       <div className="collapse__content">
         {Array.isArray(content) ? (
           <ul className="collapse__list">

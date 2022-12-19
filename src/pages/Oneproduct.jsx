@@ -36,8 +36,8 @@ const Oneproduct = () => {
         </div>
       </div>
       <div className="Oneproduct__dropdowns">
-        <Collapse title="description" content={description} />
-        <Collapse title="équipement" content={equipments} />
+        <Collapse title="Description" content={description} />
+        <Collapse title="Équipements" content={equipments} />
       </div>
     </div>
   );

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import image from "../design/banner.png";
 import products from "../__mocks__/data.json";
 import marketdata from "../__mocks__/aboutData";
-import Herobanner from "../components/Herobanner";
+import Banner from "../components/Banner";
 import Thumbnails from "../components/Thumbnails";
 
 const slogan = marketdata.slogan;
@@ -13,7 +13,7 @@ const Products = () => {
   return (
     <div className="home">
       <div className="home__banner">
-        <Herobanner image={image} title={slogan} />
+        <Banner image={image} text={slogan} />
       </div>{" "}
       <section className="home__products">
         {products.map((product) => {

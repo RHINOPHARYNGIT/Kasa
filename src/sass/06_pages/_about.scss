@@ -11,5 +11,8 @@
       margin-left: auto;
       margin-right: auto;
     }
+    @include media-query(small) {
+      width: 100%;
+    }
   }
 }
